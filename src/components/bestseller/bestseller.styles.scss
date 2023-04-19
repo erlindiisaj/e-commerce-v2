@@ -1,0 +1,70 @@
+.bestseller-section {
+  margin: 100px 0 100px 0;
+  padding: 0 200px;
+}
+
+.bestseller-section h2 {
+  font-weight: 700;
+  font-size: 40px;
+  color: #002834;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+.item-card {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 35px;
+  height: 550px;
+  width: 400px;
+}
+
+.card-img {
+  border-radius: 35px 35px 0 0;
+  height: 75%;
+  background-image: url('https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-info {
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0px 0px 35px 35px;
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+}
+.price-value {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.price-p {
+  margin-top: 5px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.name {
+  font-size: 26px;
+
+  font-weight: 500;
+  line-height: 32px;
+}

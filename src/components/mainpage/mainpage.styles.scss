@@ -1,0 +1,50 @@
+.mainpage-section {
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 200px;
+  margin: 50px 0;
+}
+
+.firstpage-txt-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.greeting-txt h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 68px;
+  color: #002834;
+}
+
+.greeting-txt p {
+  color: #002834;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.services {
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 55px;
+}
+
+.services div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.services div p {
+  margin: 0 0 0 17px;
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+}

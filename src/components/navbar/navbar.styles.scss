@@ -1,52 +1,48 @@
-.nav-section {
+.navbar-container {
   height: 120px;
-
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 0 200px;
-}
-
-.navigation-container {
-  width: 300px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navigation-container a {
-  text-decoration: none;
-  color: #002834;
-  font-weight: 700;
-  font-size: 30px;
-}
-
-.checkout-btn {
-  cursor: pointer;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  position: relative;
-}
-
-.checkout-btn span {
-  background-color: #2d4e46;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  top: calc(-0.625rem);
-  right: calc(-0.625rem);
-  color: rgb(255, 255, 255);
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  font-weight: 700;
+  margin-bottom: 50px;
+  div {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      text-decoration: none;
+      color: #2d4e46;
+      font-weight: 700;
+      font-size: 30px;
+    }
+    .checkout-btn {
+      cursor: pointer;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      position: relative;
+      span {
+        background-color: #2d4e46;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        top: calc(-0.625rem);
+        right: calc(-0.625rem);
+        color: rgb(255, 255, 255);
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+    }
+  }
 }

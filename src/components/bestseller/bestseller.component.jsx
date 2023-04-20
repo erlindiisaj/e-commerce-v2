@@ -1,30 +1,19 @@
 import './bestseller.styles.scss';
-
-import { ReactComponent as Checkout } from '../../assets/Chekcout-square.svg';
+import { useContext } from 'react';
+import { ProductsContext } from '../../contexts/products.context';
+import ProductsPreview from '../products-preview/products-preview.component';
 
 const BestSeller = () => {
+  const { products } = useContext(ProductsContext);
+
   return (
-    <section className='bestseller-section'>
+    <div className='bestseller-container'>
       <h2>Best Sellers</h2>
-      <div className='category'>
-        <p className='title'>T-Shirts</p>
-        <div className='item-card'>
-          <div className='card-img'></div>
-          <div className='card-info'>
-            <p className='name'>Stripe T-Shirt</p>
-            <div className='price-container'>
-              <div className='price'>
-                <p className='price-p'>Price:</p>
-                <p className='price-value'>$150</p>
-              </div>
-              <div>
-                <Checkout />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      {products.map((category) => {
+        const { items, title } = category;
+        return <ProductsPreview key={title} title={title} items={items} />;
+      })}
+    </div>
   );
 };
 

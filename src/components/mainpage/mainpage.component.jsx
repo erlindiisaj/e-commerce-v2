@@ -8,7 +8,7 @@ import MainImg from '../../assets/firstpage-img.svg';
 
 const MainPage = () => {
   return (
-    <section className='mainpage-section'>
+    <div className='mainpage-container'>
       <div className='firstpage-txt-container'>
         <div className='greeting-txt'>
           <h2>
@@ -41,7 +41,7 @@ const MainPage = () => {
       <div className='firstpage-img'>
         <img src={MainImg} alt='' />
       </div>
-    </section>
+    </div>
   );
 };
 

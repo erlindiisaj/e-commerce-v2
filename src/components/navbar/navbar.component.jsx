@@ -9,11 +9,11 @@ import { Fragment } from 'react';
 const NavBar = () => {
   return (
     <Fragment>
-      <section className='nav-section'>
+      <div className='navbar-container'>
         <Link to='/'>
           <Logo className='logo-container' />
         </Link>
-        <div className='navigation-container'>
+        <div>
           <Link to='/shop'>Shop</Link>
           <Link to='/signup'>Sign Up</Link>
           <Link to='/checkout' className='checkout-btn'>
@@ -21,7 +21,7 @@ const NavBar = () => {
             <Checkout />
           </Link>
         </div>
-      </section>
+      </div>
       <Outlet />
     </Fragment>
   );

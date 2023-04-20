@@ -1,0 +1,19 @@
+.products-preview-container {
+  .title {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 200px;
+    font-weight: 500;
+    font-size: 28px;
+  }
+
+  section {
+    margin: 50px 0 100px 0;
+    padding: 0 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}

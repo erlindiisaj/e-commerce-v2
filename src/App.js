@@ -1,6 +1,5 @@
 import './app.scss';
 import { Routes, Route } from 'react-router-dom';
-import { Fragment } from 'react';
 
 import Home from './routes/home/home.component';
 import Shop from './routes/shop/shop.component';
@@ -13,7 +12,7 @@ const App = () => {
     <Routes>
       <Route path='/' element={<NavBar />}>
         <Route index element={<Home />} />
-        <Route path='/shop' element={<Shop />} />
+        <Route path='/shop/*' element={<Shop />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/checkout' element={<Checkout />} />
       </Route>

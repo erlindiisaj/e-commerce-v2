@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0 200px;
+  padding: 0 170px;
   .firstpage-txt-container {
     display: flex;
     flex-direction: column;
@@ -12,14 +12,14 @@
     .greeting-txt {
       h2 {
         font-weight: 700;
-        font-size: 40px;
+        font-size: 30px;
         line-height: 68px;
         color: #002834;
       }
       p {
         color: #002834;
         font-weight: 300;
-        font-size: 20px;
+        font-size: 16px;
       }
     }
     .services {
@@ -27,7 +27,7 @@
       width: 100%;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      row-gap: 55px;
+      row-gap: 44px;
       div {
         display: flex;
         flex-direction: row;
@@ -37,7 +37,7 @@
           font-family: 'Baloo 2';
           font-style: normal;
           font-weight: 500;
-          font-size: 20px;
+          font-size: 16px;
         }
       }
     }

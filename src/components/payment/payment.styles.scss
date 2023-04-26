@@ -1,0 +1,83 @@
+$base-color: #002834;
+$second-color: #2d4e46;
+.payment {
+  grid-column: 2/3;
+  width: 400px;
+  height: 650px;
+  background: rgba(80, 132, 120, 0.25);
+  border-radius: 30px;
+  display: grid;
+  grid-template-rows: 1.5fr 2fr 4fr 1.5fr;
+  align-items: center;
+
+  .payment-title {
+    grid-row: 1/2;
+    margin: 0 30px;
+    width: 200px;
+  }
+  .payment-method {
+    grid-row: 2/3;
+    margin: 0 30px;
+    width: 200px;
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      color: rgba(0, 40, 52, 0.5);
+      margin-bottom: 15px;
+    }
+  }
+  .credit-card-info {
+    grid-row: 3/4;
+    margin: 0 30px;
+    width: 200px;
+    div {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      margin: 20px 0;
+      label {
+        color: rgba($color: $base-color, $alpha: 0.5);
+        font-weight: 400;
+        font-size: 14px;
+      }
+      input {
+        background-color: transparent;
+        margin-top: 10px;
+        outline: none;
+        border: none;
+        color: $base-color;
+        font-size: 16px;
+        font-family: 'Baloo 2';
+        &::-webkit-input-placeholder {
+          color: rgba($color: #002834, $alpha: 0.2);
+        }
+      }
+    }
+    .input-div {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .sub-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 4/5;
+
+    width: 100%;
+    button {
+      font-family: 'Baloo 2';
+      cursor: pointer;
+      background: rgba(80, 132, 120, 0.5);
+      outline: none;
+      border: transparent;
+      width: 150px;
+      height: 50px;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 18px;
+      color: #002834;
+    }
+  }
+}

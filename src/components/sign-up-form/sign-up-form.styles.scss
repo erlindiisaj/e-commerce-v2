@@ -1,0 +1,64 @@
+$base-color: #002834;
+$second-color: #2d4e46;
+.sign-up-form {
+  grid-column: 2/3;
+  margin: 0 100px;
+  display: grid;
+  grid-template-rows: 1fr 5fr 1fr;
+  .sign-up-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-row: 1/2;
+    h2 {
+      font-weight: 500;
+      font-size: 30px;
+      color: $base-color;
+      margin: 0;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  .sign-up-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-around;
+    padding-bottom: 30px;
+    input {
+      font-weight: 400;
+      color: $base-color;
+      font-family: 'Baloo 2';
+      font-size: 18px;
+      width: 100%;
+      height: 50px;
+      border: transparent;
+      border-bottom: 1px solid $base-color;
+      text-indent: 20px;
+      &:focus {
+        border: 1px solid red;
+      }
+    }
+  }
+  .sign-up-buttons {
+    grid-row: 3/4;
+    display: flex;
+    justify-content: space-between;
+    button {
+      cursor: pointer;
+      background: rgba(80, 132, 120, 0.5);
+      border: transparent;
+      border-radius: 10px;
+      width: 150px;
+      height: 50px;
+      font-weight: 500;
+      font-size: 18px;
+      font-family: 'Baloo 2';
+    }
+    .google {
+      width: 200px;
+      background: rgba(0, 40, 52, 0.5);
+    }
+  }
+}

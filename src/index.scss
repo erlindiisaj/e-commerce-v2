@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap');
+$base-color: #002834;
+$second-color: #2d4e46;
 
 ::-webkit-scrollbar {
   width: 0.4rem;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 2rem;
-  background: #2d4e46;
+  background: $second-color;
 }
 
-::-webkit-scrollbar-track {
-  background: rgb(230, 229, 229);
-}
 body {
   margin: 0;
   font-family: 'Baloo 2', cursive;
@@ -19,14 +18,14 @@ body {
 }
 
 h2 {
-  color: #002834;
+  color: $base-color;
 }
 
 p {
   margin: 0;
-  color: #002834;
+  color: $base-color;
 }
 
 a {
-  color: #002834;
+  color: $base-color;
 }

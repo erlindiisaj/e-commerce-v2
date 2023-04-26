@@ -1,0 +1,7 @@
+$base-color: #002834;
+$second-color: #2d4e46;
+.authentication-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 170px;
+}

@@ -1,5 +1,4 @@
 import './checkout-cart.styles.scss';
-import { useState } from 'react';
 
 import CartItem from '../cart-item/cart-item.component';
 import { useNavigate } from 'react-router-dom';

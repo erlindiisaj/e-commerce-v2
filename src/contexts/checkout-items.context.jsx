@@ -37,6 +37,8 @@ export const CheckoutItems = createContext({
   items: [],
   itemCount: null,
   totalPrice: null,
+  isOpen: null,
+  showItemsList: () => {},
   addCheckoutItem: () => {},
   removeCheckoutItem: () => {},
   deleteCheckoutItem: () => {},
@@ -46,6 +48,7 @@ export const CheckoutItemsProvider = ({ children }) => {
   const [items, setItems] = useState([]);
   const [itemCount, setItemCount] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const newItemCount = items.reduce(
@@ -60,6 +63,11 @@ export const CheckoutItemsProvider = ({ children }) => {
     setItemCount(newItemCount);
     setTotalPrice(newTotalPrice);
   }, [items]);
+
+  const showItemsList = (e) => {
+    e.preventDefault();
+    setIsOpen(!isOpen);
+  };
 
   const addCheckoutItem = (item) => {
     const result = addItem(items, item);
@@ -80,9 +88,11 @@ export const CheckoutItemsProvider = ({ children }) => {
     items,
     itemCount,
     totalPrice,
+    isOpen,
     addCheckoutItem,
     removeCheckoutItem,
     deleteCheckoutItem,
+    showItemsList,
   };
   return (
     <CheckoutItems.Provider value={value}>{children}</CheckoutItems.Provider>

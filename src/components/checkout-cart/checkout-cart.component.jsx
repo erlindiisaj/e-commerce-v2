@@ -1,26 +1,33 @@
-import './checkout-cart.styles.scss';
 import { useContext } from 'react';
 import { CheckoutItems } from '../../contexts/checkout-items.context';
 import CartItem from '../cart-item/cart-item.component';
 import { useNavigate } from 'react-router-dom';
 
+import {
+  CheckoutCartContainer,
+  CartItems,
+  NoItemTxt,
+  Button,
+} from './checkout-cart.styles';
+
 const CheckoutCart = () => {
   const navigate = useNavigate();
-  const { items } = useContext(CheckoutItems);
-  const clickhandler = () => {
+  const { items, showItemsList } = useContext(CheckoutItems);
+  const clickhandler = (e) => {
     navigate('/checkout');
+    showItemsList(e);
   };
   return (
-    <div className='checkout-cart-container'>
-      <div className='cart-items'>
+    <CheckoutCartContainer>
+      <CartItems>
         {items.length !== 0 ? (
           items.map((item) => <CartItem key={item.id} item={item} />)
         ) : (
-          <p className='no-items-txt'> No added items... </p>
+          <NoItemTxt> No added items... </NoItemTxt>
         )}
-      </div>
-      <button onClick={clickhandler}>Go to checkout</button>
-    </div>
+      </CartItems>
+      <Button onClick={clickhandler}>Go to checkout</Button>
+    </CheckoutCartContainer>
   );
 };
 

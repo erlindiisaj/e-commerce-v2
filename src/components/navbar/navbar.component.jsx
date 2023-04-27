@@ -12,12 +12,8 @@ import { CheckoutItems } from '../../contexts/checkout-items.context';
 
 const NavBar = () => {
   const { currentUser } = useContext(currentUserContext);
-  const { itemCount } = useContext(CheckoutItems);
-  const [isOpen, setIsOpen] = useState(false);
-  const showItemsList = (e) => {
-    e.preventDefault();
-    setIsOpen(!isOpen);
-  };
+  const { itemCount, isOpen, showItemsList } = useContext(CheckoutItems);
+
   return (
     <Fragment>
       <div className='navbar-container'>

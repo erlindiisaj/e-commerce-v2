@@ -3,7 +3,7 @@ import { useContext, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemCard from '../item-card/item-card.component';
 
-import './category.styles.scss';
+import { CategoryContainer } from './category.styles';
 
 const Category = () => {
   const { category } = useParams();
@@ -15,12 +15,12 @@ const Category = () => {
   }, [category, products]);
 
   return (
-    <div className='category-container'>
+    <CategoryContainer>
       {productsToShow &&
         productsToShow.map((item) => {
           return <ItemCard key={item.id} item={item} />;
         })}
-    </div>
+    </CategoryContainer>
   );
 };
 

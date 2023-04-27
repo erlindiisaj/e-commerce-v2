@@ -1,9 +1,11 @@
 import './checkout.styles.scss';
-
+import { useContext } from 'react';
+import { CheckoutItems } from '../../contexts/checkout-items.context';
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
 import Payment from '../../components/payment/payment.component';
 
 const Checkout = () => {
+  const { items, totalPrice } = useContext(CheckoutItems);
   return (
     <div className='checkout-container'>
       <div className='shopping-card'>
@@ -15,11 +17,13 @@ const Checkout = () => {
           <span></span>
         </div>
         <div>
-          <CheckoutItem />
+          {items.map((item) => (
+            <CheckoutItem key={item.id} item={item} />
+          ))}
         </div>
         <div className='total-price-container'>
           <p>Total:</p>
-          <p>$400</p>
+          <p>{`$${totalPrice}`}</p>
         </div>
       </div>
       <Payment />

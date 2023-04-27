@@ -5,6 +5,7 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { ProductsProvider } from './contexts/products.context';
 import { CurrentUserContextProvider } from './contexts/user.context';
+import { CheckoutItemsProvider } from './contexts/checkout-items.context';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,7 +14,9 @@ root.render(
     <BrowserRouter>
       <CurrentUserContextProvider>
         <ProductsProvider>
-          <App />
+          <CheckoutItemsProvider>
+            <App />
+          </CheckoutItemsProvider>
         </ProductsProvider>
       </CurrentUserContextProvider>
     </BrowserRouter>

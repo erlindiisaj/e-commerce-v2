@@ -7,11 +7,14 @@ import './products.styles.scss';
 
 const Products = () => {
   const { products } = useContext(ProductsContext);
+
   return (
     <div className='products-container'>
-      {products.map((product) => {
-        const { items } = product;
-        return items.map((item) => <ItemCard key={item.id} item={item} />);
+      {Object.keys(products).map((product) => {
+        const items = products[product];
+        return items.map((item) => {
+          return <ItemCard key={item.id} item={item} />;
+        });
       })}
     </div>
   );

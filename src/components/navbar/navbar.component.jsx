@@ -8,9 +8,11 @@ import { ReactComponent as Checkout } from '../../assets/Chekcout-square.svg';
 import { currentUserContext } from '../../contexts/user.context';
 import { signOutUser } from '../../utils/firebase.utils';
 import CheckoutCart from '../../components/checkout-cart/checkout-cart.component';
+import { CheckoutItems } from '../../contexts/checkout-items.context';
 
 const NavBar = () => {
   const { currentUser } = useContext(currentUserContext);
+  const { itemCount } = useContext(CheckoutItems);
   const [isOpen, setIsOpen] = useState(false);
   const showItemsList = (e) => {
     e.preventDefault();
@@ -31,7 +33,9 @@ const NavBar = () => {
           )}
 
           <Link to='/checkout' className='checkout-btn'>
-            <span className='counter'>3</span>
+            {itemCount === 0 ? null : (
+              <span className='counter'>{itemCount}</span>
+            )}
             {isOpen ? <CheckoutCart /> : null}
             <Checkout onClick={showItemsList} />
           </Link>

@@ -9,6 +9,7 @@ $second-color: #2d4e46;
     display: grid;
     grid-column: 1/2;
     grid-template-rows: 0.1fr 0.8fr 0.1fr;
+    height: fit-content;
     margin: 0 100px;
 
     .checkout-titles {
@@ -18,8 +19,7 @@ $second-color: #2d4e46;
       justify-content: space-around;
       align-items: center;
       height: 70px;
-      border-bottom: 1px solid rgba($color: $base-color, $alpha: 0.5);
-
+      border-bottom: 1px solid rgba(80, 132, 120, 1);
       p {
         padding: 10px;
         font-weight: 500;
@@ -29,7 +29,6 @@ $second-color: #2d4e46;
     }
 
     .total-price-container {
-      border-top: 1px solid rgba($color: $base-color, $alpha: 0.5);
       display: flex;
       grid-row: 3/4;
       height: 70px;

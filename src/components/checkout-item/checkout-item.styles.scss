@@ -5,18 +5,16 @@
   margin: 20px 20px;
   justify-items: center;
   align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(80, 132, 120, 0.5);
   p {
     font-weight: 500;
     font-size: 16px;
   }
-  div {
-    border: 1px solid #000;
+  img {
     border-radius: 10px;
-    width: 100px;
+    width: 150px;
     height: 150px;
-    background-image: url('https://i.postimg.cc/wjx7D1js/ryan-hoffman-u6n1-Hr-W0sd-Q-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
   }
   span {
     display: flex;
@@ -27,6 +25,8 @@
     align-items: center;
 
     .edit-quantity-btn {
+      user-select: none;
+      cursor: pointer;
       display: flex;
       margin: 0 10px;
       justify-content: center;
@@ -35,6 +35,15 @@
       height: 25px;
       background: rgba(80, 132, 120, 0.25);
       border-radius: 10px;
+      &:hover {
+        background: rgba(80, 132, 120, 0.5);
+      }
+    }
+  }
+  .deleteBtn {
+    cursor: pointer;
+    &:hover {
+      color: red;
     }
   }
 }

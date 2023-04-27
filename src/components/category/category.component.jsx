@@ -9,15 +9,15 @@ const Category = () => {
   const { category } = useParams();
   const { products } = useContext(ProductsContext);
   const [productsToShow, setProductsToShow] = useState(products[category]);
-
+  console.log(products[category]);
   useEffect(() => {
-    setProductsToShow(products.filter((items) => items.title === category));
+    setProductsToShow(products[category]);
   }, [category, products]);
 
   return (
     <div className='category-container'>
       {productsToShow &&
-        productsToShow[0].items.map((item) => {
+        productsToShow.map((item) => {
           return <ItemCard key={item.id} item={item} />;
         })}
     </div>

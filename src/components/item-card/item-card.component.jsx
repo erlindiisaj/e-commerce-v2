@@ -1,16 +1,17 @@
 import './item-card.styles.scss';
+import { useContext } from 'react';
+import { CheckoutItems } from '../../contexts/checkout-items.context';
 
 import { ReactComponent as Checkout } from '../../assets/Chekcout-square.svg';
 
 const ItemCard = ({ item }) => {
   const { imageUrl, price, name } = item;
+  const { addCheckoutItem } = useContext(CheckoutItems);
   const myStyle = {
     backgroundImage: `url(${imageUrl})`,
   };
 
-  const addItem = () => {
-    alert('Nuk punon ky buttoni');
-  };
+  const addItem = () => addCheckoutItem(item);
 
   return (
     <div className='item-card'>

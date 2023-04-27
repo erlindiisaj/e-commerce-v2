@@ -31,16 +31,18 @@ const SignUpForm = () => {
 
   const clickHandler = async (e) => {
     e.preventDefault();
-
-    try {
-      const { user } = await createAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
-      await createUserDocumentFromAuth(user, { displayName });
-      resetDefaultValues();
-    } catch (err) {
-      alert(err);
+    if (password !== confirmPassword) alert('Password doesnt match');
+    else {
+      try {
+        const { user } = await createAuthUserWithEmailAndPassword(
+          email,
+          password
+        );
+        await createUserDocumentFromAuth(user, { displayName });
+        resetDefaultValues();
+      } catch (err) {
+        alert(err);
+      }
     }
   };
 
@@ -58,8 +60,10 @@ const SignUpForm = () => {
           name='displayName'
           type='text'
           value={displayName}
+          required
         />
         <input
+          required
           onChange={handleChange}
           placeholder='Email'
           name='email'
@@ -67,6 +71,7 @@ const SignUpForm = () => {
           value={email}
         />
         <input
+          required
           onChange={handleChange}
           placeholder='Password'
           name='password'
@@ -74,6 +79,7 @@ const SignUpForm = () => {
           value={password}
         />
         <input
+          required
           onChange={handleChange}
           placeholder='Confirm Password'
           name='confirmPassword'

@@ -10,7 +10,6 @@ const CheckoutCart = () => {
   const clickhandler = () => {
     navigate('/checkout');
   };
-  console.log(items);
   return (
     <div className='checkout-cart-container'>
       <div className='cart-items'>

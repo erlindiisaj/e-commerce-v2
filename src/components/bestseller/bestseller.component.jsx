@@ -5,7 +5,6 @@ import ProductsPreview from '../products-preview/products-preview.component';
 
 const BestSeller = () => {
   const { products } = useContext(ProductsContext);
-  console.log(products);
 
   return (
     <div className='bestseller-container'>

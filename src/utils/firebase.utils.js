@@ -15,7 +15,6 @@ import {
   getDoc,
   getFirestore,
   setDoc,
-  batch,
   writeBatch,
   query,
   getDocs,

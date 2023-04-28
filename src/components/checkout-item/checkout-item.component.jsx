@@ -12,9 +12,6 @@ const CheckoutItem = ({ item }) => {
   const { name, quantity, price, imageUrl } = item;
   const { removeCheckoutItem, addCheckoutItem, deleteCheckoutItem } =
     useContext(CheckoutItems);
-  const myStyle = {
-    backgroundImage: `url(${imageUrl})`,
-  };
 
   return (
     <ProductToBuy>

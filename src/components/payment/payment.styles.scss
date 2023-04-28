@@ -1,19 +1,22 @@
 $base-color: #002834;
 $second-color: #2d4e46;
 .payment {
+  position: relative;
+  top: -50px;
   grid-column: 2/3;
   width: 400px;
-  height: 650px;
-  background: rgba(80, 132, 120, 0.25);
-  border-radius: 30px;
+  height: 550px;
+  background: rgba(80, 132, 120, 0.15);
+  border-radius: 10px 30px 10px 30px;
   display: grid;
-  grid-template-rows: 1.5fr 2fr 4fr 1.5fr;
+  grid-template-rows: 15% 20% 50% 15%;
   align-items: center;
 
   .payment-title {
     grid-row: 1/2;
+    font-size: 20px;
     margin: 0 30px;
-    width: 200px;
+    width: 250px;
   }
   .payment-method {
     grid-row: 2/3;
@@ -22,27 +25,54 @@ $second-color: #2d4e46;
     p {
       font-weight: 400;
       font-size: 14px;
-      color: rgba(0, 40, 52, 0.5);
-      margin-bottom: 15px;
+      color: rgba(0, 40, 52, 0.75);
+      margin-bottom: 5px;
+    }
+    .radio {
+      margin: 10px 0;
+      label {
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        input {
+          margin-right: 10px;
+          appearance: none;
+          border-radius: 50%;
+          width: 15px;
+          height: 15px;
+          background-color: rgba(167, 193, 187, 0.2);
+          border: 2px solid #2d4e46;
+          transition: 0.2s all linear;
+          margin-right: 10px;
+          position: relative;
+          &:checked {
+            border: 5px solid #2d4e46;
+          }
+        }
+        svg {
+          margin-right: 5px;
+        }
+      }
     }
   }
   .credit-card-info {
     grid-row: 3/4;
     margin: 0 30px;
     width: 200px;
-    div {
+    .input-div {
       display: flex;
       flex-direction: column;
       margin: 0;
-      margin: 20px 0;
+      margin: 20px 0 20px 0;
       label {
-        color: rgba($color: $base-color, $alpha: 0.5);
+        color: rgba($color: $base-color, $alpha: 0.75);
         font-weight: 400;
         font-size: 14px;
       }
       input {
         background-color: transparent;
-        margin-top: 10px;
+        margin-top: 5px;
         outline: none;
         border: none;
         color: $base-color;
@@ -53,7 +83,7 @@ $second-color: #2d4e46;
         }
       }
     }
-    .input-div {
+    div {
       display: flex;
       flex-direction: row;
     }

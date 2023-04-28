@@ -11,10 +11,7 @@ const MainPage = () => {
     <div className='mainpage-container'>
       <div className='firstpage-txt-container'>
         <div className='greeting-txt'>
-          <h2>
-            We are thrilled to have you here and we hope you'll have a wonderful
-            shopping experience
-          </h2>
+          <h2>We hope you'll have a wonderful shopping experience</h2>
           <p>
             Thank you for choosing our e-commerce website and happy shopping!
           </p>

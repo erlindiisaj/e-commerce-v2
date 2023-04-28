@@ -2,7 +2,7 @@ import './item-card.styles.scss';
 import { useContext } from 'react';
 import { CheckoutItems } from '../../contexts/checkout-items.context';
 
-import { ReactComponent as Checkout } from '../../assets/Chekcout-square.svg';
+import CheckoutBtn from '../checkout-btn/checkout-btn.component';
 
 const ItemCard = ({ item }) => {
   const { imageUrl, price, name } = item;
@@ -23,7 +23,9 @@ const ItemCard = ({ item }) => {
             <p className='price-txt'>Price:</p>
             <p>${price}</p>
           </div>
-          <Checkout onClick={addItem} />
+          <span onClick={addItem}>
+            <CheckoutBtn />
+          </span>
         </div>
       </div>
     </div>

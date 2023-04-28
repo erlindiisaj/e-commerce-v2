@@ -1,7 +1,7 @@
 import './navbar.styles.scss';
 
 import { Link, Outlet } from 'react-router-dom';
-import { useContext, Fragment, useState } from 'react';
+import { useContext, Fragment } from 'react';
 
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import { ReactComponent as Checkout } from '../../assets/Chekcout-square.svg';

@@ -1,23 +1,27 @@
 import './payment.styles.scss';
+import { ReactComponent as PayPal } from '../../assets/paypal.svg';
+import { ReactComponent as Creditcard } from '../../assets/creditcard.svg';
 
 const Payment = () => {
   return (
     <div className='payment'>
       <div className='payment-title'>
-        <h2>Payment Info</h2>
+        <h2>Payment Info.</h2>
       </div>
       <div className='payment-method'>
         <p>Payment Method</p>
         <form>
           <div className='radio'>
             <label>
-              <input type='radio' value='paypal' />
+              <input type='radio' name='payment' value='paypal' />
+              <PayPal />
               PayPal
             </label>
           </div>
           <div className='radio'>
             <label>
-              <input type='radio' value='creditcard' />
+              <input type='radio' name='payment' value='creditcard' />
+              <Creditcard />
               Credit Card
             </label>
           </div>
@@ -25,20 +29,20 @@ const Payment = () => {
       </div>
       <div className='credit-card-info'>
         <form>
-          <div>
+          <div className='input-div'>
             <label>Name on Card:</label>
             <input placeholder='Type here...' type='text' />
           </div>
-          <div>
+          <div className='input-div'>
             <label>Card Number:</label>
             <input placeholder='Type here...' type='tel' />
           </div>
-          <div className='input-div'>
-            <div>
+          <div>
+            <div className='input-div'>
               <label>Expiration Date:</label>
               <input placeholder='Type here...' type='text' />
             </div>
-            <div>
+            <div className='input-div'>
               <label>CVV</label>
               <input placeholder='Type here...' type='password' />
             </div>

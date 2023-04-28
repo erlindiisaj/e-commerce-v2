@@ -1,0 +1,15 @@
+.checkoutbtn-container {
+  cursor: pointer;
+  width: 44px;
+  display: flex;
+  border-radius: 10px;
+  background: rgb(141, 175, 167);
+  height: 44px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: ease 0.3s;
+  &:hover {
+    background: rgb(167, 193, 187);
+  }
+}

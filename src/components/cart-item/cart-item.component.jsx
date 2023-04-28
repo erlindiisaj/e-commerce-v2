@@ -5,7 +5,7 @@ const CartItem = ({ item }) => {
   return (
     <CartItemContainer>
       <img src={imageUrl} alt='img' />
-      <CartItemDetails className='item-details'>
+      <CartItemDetails>
         <span>{name}</span>
         <span>{`${quantity} X ${price}`}</span>
       </CartItemDetails>

@@ -12,22 +12,23 @@
     .greeting-txt {
       h2 {
         font-weight: 700;
-        font-size: 30px;
+        font-size: 3rem;
         line-height: 68px;
         color: #002834;
       }
       p {
         color: #002834;
         font-weight: 300;
-        font-size: 16px;
+        font-size: 1.25rem;
       }
     }
     .services {
       margin-top: 50px;
-      width: 100%;
+      margin-left: 20px;
+      width: 80%;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      row-gap: 44px;
+      row-gap: 20px;
       div {
         display: flex;
         flex-direction: row;

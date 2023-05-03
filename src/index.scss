@@ -1,13 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap');
-$base-color: #002834;
-$second-color: #2d4e46;
-
 ::-webkit-scrollbar {
   width: 0.4rem;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 2rem;
-  background: $second-color;
+  background: #2d4e46;
 }
 
 body {
@@ -18,14 +14,14 @@ body {
 }
 
 h2 {
-  color: $base-color;
+  color: #002834;
 }
 
 p {
   margin: 0;
-  color: $base-color;
+  color: #002834;
 }
 
 a {
-  color: $base-color;
+  color: #002834;
 }
